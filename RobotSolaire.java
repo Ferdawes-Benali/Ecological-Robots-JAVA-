@@ -82,15 +82,20 @@ public class RobotSolaire extends RobotEcologique {
         int choix = scanner.nextInt();
         
         switch (choix) {
-            case 1 -> déplierPanneau();
-            case 2 -> replierPanneau();
-            case 3 -> {
-                System.out.print("Combien d'heures de charge? ");
-                int heures = scanner.nextInt();
-                chargerViaSolaire(heures);
-            }
-            default -> ajouterHistorique("Action non reconnue");
-        }
+    case 1:
+        déplierPanneau();
+        break;
+    case 2:
+        replierPanneau();
+        break;
+    case 3:
+        System.out.print("Combien d'heures de charge? ");
+        int heures = scanner.nextInt();
+        chargerViaSolaire(heures);
+        break;
+    default:
+        ajouterHistorique("Action non reconnue");
+}
     }
     
     @Override
